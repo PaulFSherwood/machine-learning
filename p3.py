@@ -17,10 +17,14 @@
 # Date: March 8th, 2023
 # Purpose: Machine Learning training
 #
-# Notes:
-# - This script requires Python 3.7 or later.
-# - Make sure to install the necessary dependencies before running.
+# Educational Notes:
+# - Weights and Bias
+# - Shapes
+# - Dot product
+#
 ####################################################################################
+
+import numpy as np
 
 inputs = [1, 2, 3, 2.5]
 
@@ -41,3 +45,40 @@ for neuron_weights, neuron_bias in zip(weights, biases):
     layer_outputs.append(neuron_output)
 
 print(layer_outputs)
+
+output = np.dot(weights, inputs) + biases
+print(output)
+
+inputs = [1, 2, 3, 2.5]
+weights = [0.2, 0.8, -0.5, 1.0]
+bias = 2
+
+output = np.dot(weights, inputs) + bias
+print(output)
+
+
+#############################################
+#
+# Array:                Shape:
+#   1 = [1,5,6,2]           (4,)
+#
+#                       Type:
+#                           1D array, Vector
+#
+#############################################
+#
+# Array:                Shape:
+#   lol = [1,5,6,2]         (2, 4)
+#
+#                       Type:
+#                           2D array, Matrix
+#
+#############################################
+#
+# Array:                Shape:
+#   lollol = [1,5,6,2]      (3, 2, 4)
+#
+#                       Type:
+#                           3D Array
+#
+#############################################
