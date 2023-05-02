@@ -26,7 +26,9 @@
 
 import numpy as np
 
-inputs = [1, 2, 3, 2.5]
+inputs = [[1, 2, 3, 2.5],
+          [2.0, 5.0, -1.0, 2.0],
+          [-1.5, 2.7, 3.3, -0.8]]
 
 weights = [
             [0.2, 0.8, -0.5, 1.0],
@@ -36,6 +38,19 @@ weights = [
 
 biases = [2, 3, 0.5]
 
+weights2 = [
+            [0.1, -0.14, .5],
+            [-0.5, 0.12, -0.33],
+            [-0.44, 0.73, -0.13]
+            ]
+
+biases2 = [-1, 2, -0.5]
+
 # dot product of two vectors results in a scalar value
-output = np.dot(weights, inputs) + biases
-print(output)
+layer1_outputs = np.dot(inputs, np.array(weights).T) + biases
+print(layer1_outputs)
+
+
+layer2_outputs = np.dot(layer1_outputs, np.array(weights2).T) + biases2
+print(layer2_outputs)
+
