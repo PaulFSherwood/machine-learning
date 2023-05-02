@@ -46,6 +46,7 @@ for neuron_weights, neuron_bias in zip(weights, biases):
 
 print(layer_outputs)
 
+# dot product of two vectors results in a scalar value
 output = np.dot(weights, inputs) + biases
 print(output)
 
@@ -68,7 +69,8 @@ print(output)
 #############################################
 #
 # Array:                Shape:
-#   lol = [1,5,6,2]         (2, 4)
+#   lol = [[1,5,6,2],       (2, 4)
+#          [3,2,1,3]]
 #
 #                       Type:
 #                           2D array, Matrix
@@ -76,7 +78,12 @@ print(output)
 #############################################
 #
 # Array:                Shape:
-#   lollol = [1,5,6,2]      (3, 2, 4)
+#   lollol = [[[1,5,6,2],      (3, 2, 4)
+#              [3,2,1,3]]
+#             [[5,2,1,2],
+#              [6,4,8,4]],
+#             [[2,8,5,3],
+#              [1,1,9,4]]]
 #
 #                       Type:
 #                           3D Array
